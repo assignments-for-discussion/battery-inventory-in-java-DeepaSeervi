@@ -11,6 +11,15 @@ public class Main {
     CountsBySoH counts = new CountsBySoH();
     for(int i=0;i<presentCapacities.length;i++){
         counts=100*presentCapacities[i]/120;
+        if(counts>=80 && counts<=100){
+          System.out.println("healthy");
+        }
+      else if(counts>=63 && counts<80){
+          System.out.println("exchange");
+      }
+      else{
+          System.out.println("failed");
+      }
     }
     return counts;
   }
